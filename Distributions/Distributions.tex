@@ -1,0 +1,277 @@
+\documentclass[spanish]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{beamerthemesplit}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{babel,blindtext}
+\usepackage{amsfonts}
+\usepackage[round]{natbib}
+\bibliographystyle{chicago}
+\usepackage{subcaption} 
+
+
+\decimalpoint
+
+\usetheme{Madrid}%este es el templete que se usa a lo largo de la presentacion
+%themes
+%   default
+%   Boadilla
+%   Madrid
+%   Pittsburgh
+%   Copenhagen
+%   Warsaw
+%   Singapore
+%   Malmoe
+\newcommand\Fontvi{\fontsize{6}{7.2}\selectfont}
+\mode<presentation>%tipo de 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Funciones de distribución continua y discreta}
+\author{Gamaliel Moreno Chávez}
+\institute{MCPI}
+\date{Ago-Dic\\ 2020}%para que ponga la fecha de hoy 
+
+\frame{\titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Distribuciones de probabilidad discreta}
+
+\begin{frame}
+\frametitle{Distribuciones de probabilidad discreta}
+A menudo las observaciones que se generan mediante diferentes experimentos estadísticos tienen el mismo tipo general de comportamiento. En consecuencia, las variables aleatorias discretas asociadas con estos experimentos se pueden describir esencialmente con la misma distribución de probabilidad y, por lo tanto, es posible representarlas usando una sola fórmula. De hecho, se necesitan sólo unas cuantas distribuciones de probabilidad importantes.
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Distribución binomial}
+Con frecuencia un experimento consta de pruebas repetidas, cada una con dos resultados posibles que se pueden denominar éxito o fracaso. El proceso se conoce como proceso de Bernoulli y cada ensayo se denomina experimento de Bernoulli.
+
+
+\textbf{El proceso de Bernoulli}
+
+Solo hay dos resultados: un "éxito" $(X = 1)$ con probabilidad $p$ o un "fracaso" $(X = 0)$ con probabilidad $q = 1 - p$. El valor de la variable aleatoria $X$ se utiliza como indicador del resultado. Por ejemplo, en un solo lanzamiento de moneda, X = 1 está asociado con la aparición, o la presencia de la característica, de una cara, y X = 0 con una cruz, o la ausencia de una cara.
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{Distribución binomial}
+ 
+La función de probabilidad de esta variable aleatoria se puede expresar como
+
+$$
+p_{1} = P(X = 1) = p, p_{0} = P(X = 0) = q,
+$$
+
+El valor esperado de $X$ es 
+
+$$
+\mu = E(x)= (0)(q)+ (1)(p)=p,
+$$
+
+Y la varianza 
+$$             
+\sigma^2 = V(X) = E(X^2 ) - \mu^2 = (0^2)(q) + (1^2)(p) - p^2 = pq.                                               $$
+       
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{Distribución binomial}
+Supongamos ahora que estamos interesados en variables aleatorias asociadas con repeticiones independientes de experimentos de Bernoulli, cada una con una probabilidad de éxito, $p$. Considere primero la distribución de probabilidad de una variable aleatoria $X$ que es el número de éxitos en un número fijo de ensayos independientes, $n$. Si hay $k$ éxitos y $n - k$ fracasos en $n$ ensayos, entonces cada secuencia de $1$ y $0$ tiene la probabilidad $P (X = k) = p^k q^{n - k}$. El número de formas en que se pueden organizar $x$ éxitos en $n$ ensayos es la expresión binomial. 
+
+$$
+\frac{n!}{k!(n-k)!} \quad \text{también se expresa con} \quad \binom{n}{k}
+$$
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Distribución binomial}
+
+Dado que cada una de estas secuencias mutuamente excluyentes ocurre con probabilidad $p^k q^{n - k}$, la función de probabilidad de esta variable aleatoria viene dada por
+
+
+$$
+b(k; n, p) = p_{k}=\binom{n}{k}p^k q^{n - k} \quad k=0,1,2,\ldots,n
+$$
+
+
+Se le conoce como binomial porque el término $(n+1)$ tiene correspondencia con la expansión del binomio $(p+q)^2$
+
+$$
+\displaystyle \sum_{k=0}^{n}{p_{k}}= \sum_{k=0}^{n} \binom{n}{k}p^k q^{n - k}= (p+q)^n=1 
+$$
+
+La media y la varianza son $np$ y $npq$ respectivamente, la cual es n veces la de Bernoulli.
+
+Con frecuencia nos interesamos en problemas donde se necesita obtener $P(X < r) \text{ o } P(a \leq X \leq b)$. Estas se obtienen con sumatorias binomiales
+
+$$
+P(X < r)= B (r; n, p) =\displaystyle \sum_{x=0}^{r} b(x; n, p)
+$$
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribución binomial}
+\textbf{Ejercicios}
+
+  \begin{enumerate}
+  
+  
+\item Considere el conjunto de experimentos de Bernoulli en el que se seleccionan tres artículos al azar de un proceso de producción, luego se inspeccionan y se clasifican como defectuosos o no defectuosos. Un artículo defectuoso se designa como un éxito. El número de éxitos es una variable aleatoria $X$ que toma valores integrales de cero a 3. Considere que la probabilidad de defecto es 0.25. Encuentre los ocho resultados posibles, los valores correspondientes de X, tabule la función de distribución y calcule la probabilidad de que sean exactamente dos defectuosos usando la función de distribución.  
+    
+\item La probabilidad de que cierta clase de componente sobreviva a una prueba de choque es de 3/4. Calcule la probabilidad de que sobrevivan exactamente 2 de los siguientes 4 componentes que se prueben.
+
+    
+\end{enumerate}      
+    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribución binomial}
+\textbf{Ejercicios}
+
+  \begin{enumerate}
+  \setcounter{enumi}{2}
+\item La probabilidad de que un paciente se recupere de una rara enfermedad sanguínea es de 0.4. Si se sabe que 15 personas contrajeron la enfermedad, ¿cuál es la probabilidad de que a) sobrevivan al menos 10, b) sobrevivan de 3 a 8, y c) sobrevivan exactamente 5?
+  
+    
+\item Una cadena grande de tiendas al detalle le compra cierto tipo de dispositivo electrónico a un fabricante, el cual le indica que la tasa de dispositivos defectuosos es de 3\%. 
+    a) El inspector de la cadena elige 20 artículos al azar de un cargamento. ¿Cuál es la probabilidad de que haya al menos un artículo defectuoso entre estos 20?
+    b) Suponga que el detallista recibe 10 cargamentos en un mes y que el inspector prueba aleatoriamente 20 dispositivos por cargamento. ¿Cuál es la probabilidad de que haya exactamente tres cargamentos que contengan al menos un dispositivo defectuoso de entre los 20 seleccionados y probados?
+
+\end{enumerate}      
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribución binomial}
+\textbf{Ejercicios}
+
+  \begin{enumerate}
+  \setcounter{enumi}{4}
+\item Se conjetura que hay impurezas en 30\% del total de pozos de agua potable de cierta co-
+munidad rural. Para obtener información sobre la verdadera magnitud del problema se
+determina que debe realizarse algún tipo de prueba. Como es muy costoso probar todos
+los pozos del área, se eligen 10 al azar para someterlos a la prueba.
+    a) Si se utiliza la distribución binomial, ¿cuál es la probabilidad de que exactamente 3
+pozos tengan impurezas, considerando que la conjetura es correcta?
+    b) ¿Cuál es la probabilidad de que más de 3 pozos tengan impurezas?
+    
+\item Calcule la media y la varianza de la variable aleatoria binomial del ejemplo 3
+    
+
+    
+\end{enumerate}      
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribución multinomial}  
+El experimento binomial se convierte en un \textbf{experimento multinomial} si cada prueba
+tiene más de dos resultados posibles.
+\begin{block}{Distribución multinomial}
+En general, si un ensayo dado puede tener como consecuencia cualquiera de los $k$
+resultados posibles $E_{1} , E_{2} ,\ldots, E_{k}$ con probabilidades $p_{1} , p_{2} ,\ldots , p_{k}$ , la distribución multinomial dará la probabilidad de que $E_{1}$ ocurra $x_{1}$ veces, $E_{2}$ ocurra $x_{2}$ veces... y $E_{k}$ ocurra $x_{k}$ veces en $n$ ensayos independientes, donde $x_{1} + x_{2} + \cdots + x_{k} = n$.
+\end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribución multinomial}  
+Para derivar la fórmula general procedemos como en el caso binomial. El número
+total de ordenamientos esta dado por 
+
+\begin{equation*}
+\binom{n}{x_{1}, x_{2} \ldots , x_{k} }= \frac{n!}{x_{1}!x_{1}!\cdots x_{k}!}
+\end{equation*}
+
+Como todas las particiones son mutuamente excluyentes y tienen la misma probabilidad de ocurrir, obtenemos la distribución multinomial multiplicando la probabilidad para un orden específico por el número total de particiones.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribución multinomial}  
+\begin{block}{Distribución multinomial}
+Si un ensayo dado puede producir los $k$ resultados $E_{1} , E_{2} ,\ldots, E_{k}$ con probabilidades $p_{1} , p_{2} ,\ldots , p_{k}$, entonces la distribución de probabilidad de las variables aleatorias $X_{1} , X_{2} ,ldots, X_{k}$, que representa el número de ocurrencias para $E_{1} , E_{2} ,\ldots, E_{k}$ en $n$ ensayos independientes,
+es
+\begin{equation*}
+f(x_{1}, x_{2}, \cdots , x_{k}; p_{1} , p_{2} ,\ldots , p_{k}, n)= \binom{n}{x_{1}, x_{2} \ldots , x_{k} } p_{1}^{x_{1}}p_{2}^{x_{2}} \cdots p_{k}^{x_{k}}
+\end{equation*}
+\end{block} 
+con 
+
+\begin{equation*}
+\displaystyle \sum_{i=1}^{k}x_{i}=n \quad  \sum_{i=1}^{k}p_{i}=1
+\end{equation*}   
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribución multinomial}  
+Ejemplo
+
+La complejidad de las llegadas y las salidas de los aviones en un aeropuerto es tal que a
+menudo se utiliza la simulación por computadora para modelar las condiciones “ideales”. Para un aeropuerto específico que tiene tres pistas se sabe que, en el escenario ideal,
+las probabilidades de que las pistas individuales sean utilizadas por un avión comercial
+que llega aleatoriamente son las siguientes:
+\begin{center}
+Pista 1: p 1 = 2/9;
+Pista 2: p 2 = 1/6;
+Pista 3: p 3 = 11/18
+\end{center}
+¿Cuál es la probabilidad de que 6 aviones que llegan al azar se distribuyan de la siguien-
+te manera?
+\begin{center}
+Pista 1: 2 aviones;
+Pista 2: 1 avión;
+Pista 3: 3 aviones
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribución multinomial}  
+Solución: Si usamos la distribución multinomial, tenemos
+
+\begin{equation*} \label{eq2}
+\begin{split}
+f(2,1,3; \frac{2}{9}, \frac{1}{6},\frac{11}{18}, 6) & = \binom{6}{2, 1, 3} (2/9)^{2} (1/6)^{1} (11/18)^{3} \\
+ & = \frac{6!}{2!1!3!} \frac{2^2}{9^2} \frac{1}{6}\frac{11^3}{18^3}=0.1127
+\end{split}
+\end{equation*}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end {document}
+
+
+
+                                                  
+
+
+
+
+
+
