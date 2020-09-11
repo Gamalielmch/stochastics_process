@@ -1,0 +1,406 @@
+\documentclass[spanish]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{beamerthemesplit}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{babel,blindtext}
+\usepackage{amsfonts}
+\usepackage[round]{natbib}
+\bibliographystyle{chicago}
+\usepackage{subcaption} 
+
+
+\decimalpoint
+
+\usetheme{Malmoe}%este es el templete que se usa a lo largo de la presentacion
+%themes
+%   default
+%   Boadilla
+%   Madrid
+%   Pittsburgh
+%   Copenhagen
+%   Warsaw
+%   Singapore
+%   Malmoe
+\newcommand\Fontvi{\fontsize{6}{7.2}\selectfont}
+\mode<presentation>%tipo de 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Probabilidad conjunta}
+\author{Gamaliel Moreno Chávez}
+\institute{MCPI}
+\date{Ago-Dic\\ 2020}%para que ponga la fecha de hoy 
+
+\frame{\titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Distribuciones de probabilidad conjunta}
+Hay situaciones en las que se busque registrar los resultados simultáneos de
+diversas variables aleatorias. Por ejemplo, en un experimento químico controlado podríamos medir la cantidad del precipitado P y la del volumen V de gas liberado, lo que daría lugar a un espacio muestral bidimensional que consta de los resultados $(p, v)$; o bien, podríamos interesarnos en la dureza d y en la resistencia a la tensión T de cobre estirado en frío que produciría los resultados $(d, t)$.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribuciones de probabilidad conjunta}
+Solo consideraremos el caso de dos variables aleatorias discretas $X$ e $Y$ que forman una variable aleatoria bidimensional denotada por $(X, Y)$, que puede tomar pares de valores $(x_{i}, y_{j})$: por ejemplo, podríamos asumir $(i = 1, 2,\ldots; j = 1, 2,\ldots)$ (Cualquier secuencia puede ser finita o infinita, o comenzar para algunos otros valores) con la función de probabilidad conjunta o función de masa de
+probabilidad $p(x_{i}, y_{j})$, que ahora es una función de dos variables. 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribuciones de probabilidad conjunta}
+Las probabilidades deben satisfacer
+\begin{itemize}
+\item $0\leq p(x_{i}, y_{j})\leq 1 \quad \forall (i,j)$
+\item $\displaystyle \sum_{i\in I} \sum_{j\in J} p(x_{i},y_{j})=1$
+\end{itemize}
+Los dominios de $i$ y $j$ están definidos por $i\in I$ y $j\in J$ donde $I$ y $J$ pueden ser secuencias limitadas o ilimitadas de los números enteros.
+\newline
+\\
+Las variables aleatorias $X$ y $Y$ son independientes si y sólo si 
+\begin{equation*}
+p(x_{i},y_{j})=q(x_{i})r(y_{j})  \quad \forall (i,j)
+\end{equation*}
+donde 
+
+\begin{equation*}
+\sum_{i\in I} q(x_{i})=1 \quad \sum_{j\in J} r(y_{j})=1   
+\end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Valor esperado condicional}  
+Si la variable aleatoria $Z = H (X, Y)$ es una función de las variables aleatorias $X$ y $Y$, entonces el valor esperado de Z viene dado por
+\begin{equation*}
+E(Z)= \sum_{i\in I} \sum_{j\in J} H(x_{i},y_{j})p(x_{i},y_{j} )
+\end{equation*}
+
+Consideramos la distribución conjunta de dos variables aleatorias $X$ e $Y$ con función de masa conjunta $p(x_{i},y_{j} )$. Suponemos que podemos asociarnos con probabilidades condicionales $X$ e $Y$
+\begin{equation*}
+P (X = x_{i} \vert  Y = y_{j} ) \text{ y  }  P (Y = y_{j} \vert X = x_{i}).
+\end{equation*}
+otra notación equivalente 
+\begin{equation*}
+p_{X}(x_{i} \vert y_{j} ) \text{ o simplemente  }  P (X \vert Y).
+\end{equation*}
+
+\begin{equation*}
+p_{Y}(y_{j} \vert x_{i} ) \text{ o simplemente  }  P (Y \vert X).
+\end{equation*}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Valor esperado condicional}  
+El valor condicional de $X$ para cada elemento de $Y$ es
+\begin{equation*}
+E(X\vert Y = y_{j}) =  \sum_{i\in I}  x_{i} P(X = x_{i} \vert Y = y_{j}) \text{ o }= \sum_{i\in I}  x_{i} p_{X}(x_{i} \vert y_{j} ).
+\end{equation*}
+
+La importancia de esta expectativa es que tiene valor para cada elemento de $J$. La totalidad de estos valores es $E [X  \vert Y]$, que es una variable aleatoria. Tendrá el mismo número de elementos que $J$. Del mismo modo
+
+\begin{equation*}
+E(Y \vert X = x_{i}) = \sum_{j\in J}  y_{j} p_{Y}(y_{j} \vert x_{i} ).
+\end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Probabilidad condicional}  
+Las probabilidades condicionales están dadas por
+
+\begin{equation*}
+p_{X}(x_{i} \vert y_{j} ) = p(x_{i},y_{j} )/ \sum_{i\in I} p(x_{i},y_{j} )
+\end{equation*}
+
+\begin{equation*}
+p_{Y}(y_{j} \vert x_{i} ) = p(x_{i},y_{j} )/ \sum_{j\in J} p(x_{i},y_{j} )
+\end{equation*}
+
+En la primera expresión, $p(x_{i},y_{j})$ es la probabilidad de que ocurran $X$ e $Y$, y el denominador es la probabilidad de que ocurra $Y$.Se aplica una interpretación similar a la segunda. Las probabilidades $\sum_{i\in I} p(x_{i},y_{j} )$ y $\sum_{j\in J} p(x_{i},y_{j} )$ se conocen como distribuciones de probabilidad marginal.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Probabilidad condicional}  
+Si $X$ e $Y$ son independientes, entonces las ecuaciones anteriores se convierten en
+\begin{equation*}
+p_{X}(x_{i}, y_{j} )= q(x_{i}), \quad p_{Y}(y_{j}, x_{i} ) = r(y_{j})
+\end{equation*}
+con valores esperados 
+\begin{equation*}
+E(X\vert Y)= \sum_{i\in I} x_{i}q(x_{i})= E(x)
+\end{equation*}
+\begin{equation*}
+E(Y\vert X)= \sum_{j\in J} y_{j}r(y_{j})= E(y)
+\end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribuciones de probabilidad conjunta}
+Las esperanzas condicionales $E (X \vert Y)$ y $E (Y \vert X)$, al ser variables aleatorias, también tendrán expectativas.
+\begin{equation*}
+\begin{split}
+E(E(X\vert Y )) & = \sum_{j\in J} E(X\vert Y) \sum_{k\in I} p(x_{k},y_{j}) \\
+ & =  \sum_{j\in J} \sum_{i\in I}x_{i}p_{X}(x_{i},y_{j} ) \sum_{k\in I} p(x_{k},y_{j}) \\
+ & =  \sum_{j\in J} \sum_{i\in I}x_{i}p(x_{i},y_{j} )\\
+ & = E(X)
+\end{split}
+\end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribuciones de probabilidad conjunta}
+Ejemplo 
+
+Sea la variable aleatoria $(X, Y)$ tome los valores $(x_{i}, y_{j})$ $(i = 1, 2, 3; j = 1, 2, 3)$. Las funciones de masa $p(x_{i}, y_{j})$ se dan en la tabla.
+
+\begin{center}
+\begin{tabular}{ c c c c } 
+$p(x_{i},y_{j})$ & $y_{1}$ & $y_{2}$ & $y_{3}$\\
+ \hline
+ $x_{1}$ & 0.25 & 0  & 0.05\\ 
+ $x_{2}$ & 0.05 & 0.10 & 0.15\\ 
+ $x_{3}$ & 0.05 & 0.25 & 0.10\\ 
+ \hline
+\end{tabular}
+\end{center}
+Encontrar la variable aleatoria $E(X \vert Y )$, y verifique $E(E(X\vert Y )) = E(X)$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribuciones de probabilidad conjunta}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{center}
+\begin{tabular}{ c c c c } 
+\hline
+$p(x_{i},y_{j})$ & $y_{1}$ & $y_{2}$ & $y_{3}$\\
+ \hline
+ $x_{1}$ & 0.25 & 0  & 0.05\\ 
+ $x_{2}$ & 0.05 & 0.10 & 0.15\\ 
+ $x_{3}$ & 0.05 & 0.25 & 0.10\\ 
+ \hline
+\end{tabular}
+\end{center}
+\end{column}
+
+
+\begin{column}{0.5\textwidth}
+Notese de la tabla
+
+\begin{equation*}
+I = \lbrace 1,2,3  \rbrace 
+\end{equation*}
+
+\begin{equation*}
+J = \lbrace 1,2,3  \rbrace
+\end{equation*}
+
+\begin{equation*}
+p(x_{1} , y_{3} ) = 0.05 \quad p(x_{3} , y_{2} ) = 0.25
+\end{equation*}
+
+\begin{equation*}
+\sum_{i=1}^3 \sum_{j=1}^3 p(x_{i} , y_{j} ) = 1
+\end{equation*}
+
+
+
+\end{column}
+\end{columns}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribuciones de probabilidad conjunta}
+
+\begin{center}
+\begin{tabular}{ c c c c } 
+\hline
+$p(x_{i},y_{j})$ & $y_{1}$ & $y_{2}$ & $y_{3}$\\
+ \hline
+ $x_{1}$ & 0.25 & 0  & 0.05\\ 
+ $x_{2}$ & 0.05 & 0.10 & 0.15\\ 
+ $x_{3}$ & 0.05 & 0.25 & 0.10\\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Las distribuciones de probabilidad marginal para $Y$ tendrán cada una tres componentes, a saber
+
+
+\begin{equation*}
+\sum_{i=1}^3 p(x_{i} , y_{1} ) = p(x_{1} , y_{1}) + p(x_{2}, y_{1}) + p(x_{3}, y_{1}) = 0.25 + 0.05 + 0.05 = 0.35
+\end{equation*}
+
+\begin{equation*}
+\sum_{i=1}^3 p(x_{i} , y_{2} ) = 0+0.01+0.25=0.35
+\end{equation*}
+
+\begin{equation*}
+\sum_{i=1}^3 p(x_{i} , y_{3} ) = 0.05 + 0.15 + 0.10 = 0.3.
+\end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribuciones de probabilidad conjunta}
+
+\begin{center}
+\begin{tabular}{ c c c c } 
+\hline
+$p(x_{i},y_{j})$ & $y_{1}$ & $y_{2}$ & $y_{3}$\\
+ \hline
+ $x_{1}$ & 0.25 & 0  & 0.05\\ 
+ $x_{2}$ & 0.05 & 0.10 & 0.15\\ 
+ $x_{3}$ & 0.05 & 0.25 & 0.10\\ 
+ \hline
+\end{tabular}
+\end{center}
+
+DE manera similar para  X
+
+\begin{equation*}
+\sum_{j=1}^3 p(x_{1} , y_{j} ) = 0.3
+\end{equation*}
+
+\begin{equation*}
+\sum_{j=1}^3 p(x_{2} , y_{j} ) = 0.3
+\end{equation*}
+
+\begin{equation*}
+\sum_{j=1}^3 p(x_{3} , y_{j} ) = 0.4
+\end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribuciones de probabilidad conjunta}
+
+\begin{center}
+\begin{tabular}{ c c c c } 
+\hline
+$p(x_{i},y_{j})$ & $y_{1}$ & $y_{2}$ & $y_{3}$\\
+ \hline
+ $x_{1}$ & 0.25 & 0  & 0.05\\ 
+ $x_{2}$ & 0.05 & 0.10 & 0.15\\ 
+ $x_{3}$ & 0.05 & 0.25 & 0.10\\ 
+ \hline
+\end{tabular}
+\end{center}
+Calculo de las probabilidades condicionales
+
+\begin{equation*}
+p_{X} (x_{1} |y_{1}) = p(x_{1}, y_{1})/ \sum_{i=1}^3 p(x_{i}, y_{1}) = 0.25/0.35 = 5/7,
+\end{equation*}
+
+\begin{equation*} 
+p_{X} (x_{2} |y_{1}) = 0.05/0.35 = 1/7, \quad  p_{X} (x_{3} |y_{1}) = 0.05/0.35 = 1/7,
+\end{equation*}
+
+\begin{equation*}
+p_{X} (x_{1} |y_{2}) = 0, \quad  p_{X} (x_{2} |y_{2}) = 2/7, \quad  p_{X} (x_{3} |y_{2}) = 5/7,
+\end{equation*}
+
+\begin{equation*}
+p_{X} (x_{1} |y_{3}) = 1/6, \quad  p_{X} (x_{2} |y_{3}) = 1/2, \quad  p_{X} (x_{3} |y_{3}) = 1/3,
+\end{equation*}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribuciones de probabilidad conjunta}
+
+\begin{center}
+\begin{tabular}{ c c c c } 
+\hline
+$p(x_{i},y_{j})$ & $y_{1}$ & $y_{2}$ & $y_{3}$\\
+ \hline
+ $x_{1}$ & 0.25 & 0  & 0.05\\ 
+ $x_{2}$ & 0.05 & 0.10 & 0.15\\ 
+ $x_{3}$ & 0.05 & 0.25 & 0.10\\ 
+ \hline
+\end{tabular}
+\end{center}
+Con esto podemos encontrar la esperanza condicional 
+
+\begin{equation*}
+E(X|Y=y_{1}) = \sum_{i=1}^3 x_{i}p(x_{i}\vert y_{1}) = (1)(7/5)+ (2)(1/7)+(3)(1/7) = 10/7,
+\end{equation*}
+
+\begin{equation*} 
+E(X|Y=y_{2}) = \sum_{i=1}^3 x_{i}p(x_{i}\vert y_{2}) = 19/7,
+\end{equation*}
+
+\begin{equation*}
+E(X|Y=y_{3}) = \sum_{i=1}^3 x_{i}p(x_{i}\vert y_{3}) = 13/6,
+\end{equation*}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Distribuciones de probabilidad conjunta}
+
+\begin{center}
+\begin{tabular}{ c c c c } 
+\hline
+$p(x_{i},y_{j})$ & $y_{1}$ & $y_{2}$ & $y_{3}$\\
+ \hline
+ $x_{1}$ & 0.25 & 0  & 0.05\\ 
+ $x_{2}$ & 0.05 & 0.10 & 0.15\\ 
+ $x_{3}$ & 0.05 & 0.25 & 0.10\\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Así la variable aleatoria $E(X\vert Y)$ toma los valores 
+\begin{equation*}
+\bigg\lbrace \frac{10}{7} \frac{19}{7} \frac{13}{6}\bigg\rbrace = Z = \lbrace z_{1},z_{2},z_{3}\rbrace
+\end{equation*}
+Entonces el valor esperado de $E(X\vert Y)$ o de $Z$ es 
+\begin{equation*} 
+\begin{split}
+E(Z) &= \sum_{j=1}^3 z_{j} \sum_{i=1}^3  p(x_{i}, y_{j}) \\
+& = (10/7)(0.35)+(19/7)(0.35)+(13/6)(0.3)=21/10
+\end{split}
+\end{equation*}
+igualmente 
+\begin{equation*}
+E(X) = \sum_{i=1}^3 \sum_{j=1}^3 x_{i}p(x_{i},y_{j}) = (1)(0.3)+(2)(0.3)+(3)(0.4)=21/10
+\end{equation*}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end {document}
+
+
+
+                                                  
+
+
+
+
+
+
