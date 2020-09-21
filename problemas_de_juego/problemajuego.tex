@@ -149,6 +149,95 @@ u_{k}=\frac{a-k}{a}, \quad (p= \frac{1}{2} )
 \end{equation*}
 
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Duration of the game}
+It is natural in the gambler’s ruin problem to be curious about how long, or really
+how many plays we would expect the game to last.\vspace{1em}
+
+
+Two variables: $k$, the initial capital, and $n$, the remaining number of plays until the end of the game.Now $n$ is unknown, and is a value of the random variable $N$ which depends, in turn, on the results of the remaining plays.\vspace{1em}
+
+
+Let $p(n\vert k)$ be the conditional probability that the game ends in $n$ steps given that the initial capital is $k$. the $n$ will be any positive integer greater than or equal to the smaller of $k$ and $a - k$.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Duration of the game}
+\begin{block}{Expected duration}
+Let the random variable $N$ be the number of plays until the game ends, and let $K$ be the random variable of the initial stake. The expected number of plays to termination will be 
+\begin{equation*}
+E(N\vert K)= \sum_{n=0}^{\infty}{np(n\vert k)}=d_{k}
+\end{equation*}
+\end{block}
+$p(n\vert k)$ is a probability function and must therefore satisfy
+
+\begin{equation*}
+\sum_{n=0}^{\infty}{p(n\vert k)}=1
+\end{equation*}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Duration of the game}
+
+After the result of the next play is known, then the process will move from step $(k, n)$ to either step $(k + 1, n - 1)$ with probability p, or to step $(k - 1, n - 1)$ with probability $q = 1-p$. By the law of total probability, it follows
+that
+
+\begin{equation*}
+p(n\vert k) = p(n -1\vert k + 1)p + p(n -1\vert k -1)q
+\end{equation*}
+
+Substituting for $p(n\vert k)$ in $d_{k}= \sum_{n=0}^{\infty}{np(n\vert k)}$
+\begin{equation*}
+d_{k} = p \sum_{n=1}^{\infty} np(n-1 \vert k+1)+ q \sum_{n=1}^{\infty}np(n -1\vert k -1)
+\end{equation*}
+
+The change of variable $r = n - 1$ leads to
+
+\begin{equation*}
+d_{k} = p \sum_{r=0}^{\infty} (r+1)p(r \vert k+1)+ q \sum_{r=0}^{\infty}(r+1)p(r\vert k -1)
+\end{equation*}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Duration of the game}
+
+\begin{equation*}
+d_{k} = p \sum_{r=0}^{\infty} (r+1)p(r \vert k+1)+ q \sum_{r=0}^{\infty}(r+1)p(r\vert k -1)
+\end{equation*}
+reorder 
+
+\begin{multline*}
+d_{k} = p \sum_{r=1}^{\infty} (r)p(r \vert k+1)+ q \sum_{r=1}^{\infty}(r)p(r\vert k -1)+ \\
+p \sum_{r=0}^{\infty} p(r \vert k+1)+ q \sum_{r=0}^{\infty}p(r\vert k -1)
+\end{multline*}
+
+ 
+\begin{equation*}
+d_{k} = p \sum_{r=1}^{\infty} (r)p(r \vert k+1)+ q \sum_{r=1}^{\infty}(r)p(r\vert k -1)+p+q
+\end{equation*}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Duration of the game}
+Hence the expected duration $d_{k}$ satisfies the difference equation
+
+\begin{equation*}
+d_{k} = p d_{k+1} + q d_{k-1} + 1, \quad (k \geq 1)
+\end{equation*}
+
+where
+\begin{equation*}
+d_{k+1} = p \sum_{r=1}^{\infty} (r)p(r \vert k+1) \quad \text{  and  } \quad d_{k-1}=\sum_{r=1}^{\infty}(r)p(r\vert k -1)
+\end{equation*}
+This is a linear inhomogeneous second-order difference equation. The boundary conditions are obtained by $k = 0$ and $k = a$, then the game terminates so that the expected durations must be zero, that is, 
+\begin{equation*}
+d_{0} = d_{a} = 0.
+\end{equation*}
+
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end {document}
