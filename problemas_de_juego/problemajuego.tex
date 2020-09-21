@@ -140,6 +140,7 @@ which are the \textbf{boundary conditions} for the difference equation
 \begin{frame}
 \frametitle{Gambler’s ruin}
 Solving the differential equation
+\begin{block}{Probability of ruin}
 \begin{equation*}
 u_{k}=\frac{s^k-s^a}{1-s^a}, \quad (p\neq \frac{1}{2} )
 \end{equation*}
@@ -147,8 +148,23 @@ u_{k}=\frac{s^k-s^a}{1-s^a}, \quad (p\neq \frac{1}{2} )
 \begin{equation*}
 u_{k}=\frac{a-k}{a}, \quad (p= \frac{1}{2} )
 \end{equation*}
+\end{block}
+
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Probability of ruin}
+Numerical simulations
+\begin{center}
+\includegraphics[scale=0.35]{im1.png}
+\end{center}
+
+\end{frame}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Duration of the game}
@@ -237,6 +253,34 @@ d_{0} = d_{a} = 0.
 
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Duration of the game}
+\begin{block}{expected duration}
+\begin{equation*}
+d_{k} = k(a - k), \quad p = q
+\end{equation*}
+\begin{equation*}
+d_{k} = \frac{1}{1-2p} \left[  k-\frac{a(1-s^k)}{1-s^a} \right] , \quad q \neq q
+\end{equation*}
+
+
+\end{block}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Duration of the game}
+Numerical simulations
+\begin{center}
+\includegraphics[scale=0.4]{im2.png}
+\end{center}
+
+\end{frame}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
