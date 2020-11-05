@@ -144,7 +144,7 @@ Notese que cada renglones de $T$ es una distribución de probabilidad. Cualquier
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Probabilidad estacionaria o absoluta}
-Otra probabilidad de interés es la del el resultado $E_{j}$ después de $n$ pasos, dada una distribución de probabilidad inicial $\lbrace p_{i}^{(0)}\rbrace$.  Donde $p_{i}^{(0)}$ es la probabilidad que inicialmente el sistema ocupe el estado $E_{i}$. Seguro $\sum_{i=1}^{m}p_{i}^{0}=1$. Sea $p_{j}^{(1)}$  la probabilidad de que $E_{j}$ sea ocupado después de un paso. Por la ley de probabilidad total 
+Otra probabilidad de interés es la del resultado $E_{j}$ después de $n$ pasos, dada una distribución de probabilidad inicial $\lbrace p_{i}^{(0)}\rbrace$.  Donde $p_{i}^{(0)}$ es la probabilidad que inicialmente el sistema ocupe el estado $E_{i}$. Seguro $\sum_{i=1}^{m}p_{i}^{0}=1$. Sea $p_{j}^{(1)}$  la probabilidad de que $E_{j}$ sea ocupado después de un paso. Por la ley de probabilidad total 
 \begin{equation*}
 p_{j}^{(1)}= \sum_{i=1}^{m}p_{i}^{(0)} p_{ij}
 \end{equation*}
@@ -294,6 +294,94 @@ ya que ${p_{ij}}^{(2)} $ son los elementos de $T^2$ y así sucesivamente, la reg
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Ejemplo}
+En una determinada región, los patrones climáticos tienen la siguiente secuencia. Un día se describe como soleado (S) si el sol brilla durante más del 50\% de las horas de luz y nublado (C) si el sol brilla durante menos del 50\% de las horas de luz. Los datos indican que si está nublado un día, es igualmente probable que esté nublado o soleado al día siguiente; si hace sol hay una probabilidad de 1/2 de que esté nublado y de 2/3 de que esté soleado al día siguiente.
+
+\begin{enumerate}
+\item Construya la matriz de transición T para este proceso.
+\item Si hoy está nublado, ¿cuáles son las probabilidades de que a) esté nublado, b) soleado, dentro de tres días?
+\item Calcule $T^5$ y $T^{10}$. ¿Cómo crees que $T^n$ se comporta cuando $n \rightarrow  \infty$? ¿Cómo se comporta $p^{(n)}$ cuando $n \rightarrow  \infty$? ¿Espera que el límite dependa de $p^{(0)}$?
+\end{enumerate}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{Ejemplo}
+\begin{enumerate}
+\item Construya la matriz de transición T para este proceso.
+\end{enumerate}
+
+Se asume que es un proceso Markoviano. Cadena de dos estados 
+
+\begin{center}
+$E_{1}=$ (clima nublado, C) \hspace{2em} $E_{2}=$ (clima soleado, S)
+\end{center} 
+Matriz de transición 
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+\begin{tabular}{ c c c }
+  & C & S \\ 
+  \hline
+ C & 1/2 & 1/2 \\  
+ S & 1/3 & 2/3    
+\end{tabular}
+\end{center}
+\column{0.5\textwidth}
+\begin{center}
+
+\begin{equation*}
+T= \begin{bmatrix}
+1/2 & 1/2 \\
+1/3 & 2/3  
+\end{bmatrix}
+\end{equation*}
+
+\end{center}
+\end{columns}
+Las probabilidades de transición actuales son
+
+\begin{equation*}
+p_{11} = 1/2, \quad p_{12} = 1/2,  \quad p_{21} = 1/3,  \quad p_{22} = 2/3
+\end{equation*}
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{Ejemplo}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item Si hoy está nublado, ¿cuáles son las probabilidades de que a) esté nublado, b) soleado, dentro de tres días?
+\end{enumerate}
+
+\begin{equation*}
+\textbf{p}^{(0)}=\left[ p_{1}^{(0)} \quad p_{2}^{(0)}\right] =\left[ 1 \quad  0 \right]  
+\end{equation*}
+lo que significa que hoy está nublado. Dentro de tres días
+\small
+\begin{align*} 
+\textbf{p}^{(3)}  & = \left[ 1 \quad  0 \right] {\begin{bmatrix} 1/2 & 1/2 \\ 1/3 & 2/3   \end{bmatrix}} ^3\\
+& =\left[ 1 \quad  0 \right] {\begin{bmatrix} 29/72 & 43/72 \\ 43/108 & 65/108  \end{bmatrix}} \\
+& =\left[ 29/72 \quad  43/72 \right] = \left[ 0.40278 \quad  0.59722 \right]
+\end{align*}
+Por lo que las probabilidades son: (a) $p_{1}^{(3)}= 29/72$ y (b) $p_{2}^{(3)}=43/72$ 
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \end {document}
 
 
