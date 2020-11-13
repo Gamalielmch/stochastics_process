@@ -377,8 +377,507 @@ lo que significa que hoy está nublado. Dentro de tres días
 \end{align*}
 Por lo que las probabilidades son: (a) $p_{1}^{(3)}= 29/72$ y (b) $p_{2}^{(3)}=43/72$ 
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+Considere  la siguiente matriz de transición
+\begin{center}
+\includegraphics[scale=0.4]{im2}
+\end{center}
+Queremos encontrar un fórmula general para $T^{n}$. Primero encontramos los eigenvalores ($\lambda$)de $T$ con $det(T-\lambda I_{2})=0$
+\begin{center}
+\includegraphics[scale=0.35]{im3}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+\begin{center}
+\includegraphics[scale=0.35]{im3}
+\end{center}
+Resolviendo
+\begin{center}
+\includegraphics[scale=0.4]{im4}
+\end{center}
+Los eigenvalores de T son $\lambda_{1}=1$ y $\lambda_{2}= 1-\alpha-\beta =s$. Notese que las matrices estocásticas siempre va a tener un eigenvalor unitario.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+Los eigenvalores de T son $\lambda_{1}=1$ y $\lambda_{2}= 1-\alpha-\beta =s$. 
+
+Encontrando los eigenvectores asociados a los eigenvalores. Sea $\textbf{r}_{1}$ es eigenvector de $\lambda_{1}$ definido por 
+
+
+\begin{center}
+\includegraphics[scale=0.4]{im5}
+\end{center}
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+
+\begin{center}
+\includegraphics[scale=0.4]{im5}
+\end{center}
+Encontrando alguna solución no trivial a la esta ecuación 
+\begin{center}
+\includegraphics[scale=0.4]{im6}
+\end{center}
+
+Notese que el vector asociado a eigenvalor unitario es un vector de unos.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+De manera similar encontramos los eigenvectores para $\lambda_{2}= 1-\alpha-\beta =s$. 
+
+\begin{center}
+\includegraphics[scale=0.4]{im7}
+\end{center}
+para este caso el vector queda 
+\begin{center}
+\includegraphics[scale=0.4]{im8}
+\end{center}
+
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+Ahora formamos la matriz C con los eigenvectores 
+
+\begin{center}
+\includegraphics[scale=0.4]{im9}
+\end{center}
+
+obtenemos su inversa
+
+\begin{center}
+\includegraphics[scale=0.4]{im10}
+\end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+Si expandimos el producto matricial $C^{-1}TC$ tenemos 
+\begin{center}
+\includegraphics[scale=0.4]{im11}
+\end{center}
+Ahora $D$ es una matriz diagonal con los valores propios de $T$ como sus elementos diagonales: este proceso se conoce en álgebra lineal como la diagonalización de una matriz.El resultado es significativo ya que las matrices diagonales son fáciles de multiplicar.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+Para el caso de potencias
+\begin{center}
+\includegraphics[scale=0.4]{im12}
+\end{center}
+donde
+\begin{center}
+\includegraphics[scale=0.4]{im13}
+\end{center}
+se puede probar que 
+\begin{center}
+\includegraphics[scale=0.4]{im14}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+se puede probar que 
+\begin{center}
+\includegraphics[scale=0.4]{im14}
+\end{center}
+con
+\begin{center}
+\includegraphics[scale=0.4]{im15}
+\end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+Entonces el producto de matrices queda como 
+
+\begin{center}
+\includegraphics[scale=0.4]{im16}
+\end{center}
+
+dado que $0<\alpha,\beta < 1$, además $\vert s\vert <1$ y si $n\rightarrow \infty $ entonces $s^{n} \rightarrow 0$ por lo tanto
+\begin{center}
+\includegraphics[scale=0.4]{im17}
+\end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+Por lo tanto para cualquier distribución de probabilidad inicial $\textbf{p}_{0}$, la distribución sobre los estados después de n pasos esta dada por 
+\begin{center}
+\includegraphics[scale=0.4]{im18}
+\end{center}
+se puede notar que conforme  $n\rightarrow \infty $  el limite es independiente de $\textbf{p}^{(0)}$. Esto es un ejemplo de una distribución invariante de la cadena de Markov, ya que es independiente de la distribución inicial. Se dice que la cadena está en equilibrio.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+¿Qué sucede con el limite si $\alpha=\beta=1$? ¿y qué sucede si $\alpha = 1, 0 < \beta < 1$ or $0 < \alpha < 1$, $\beta = 1$?.
+tenga presente 
+\begin{equation*}
+s=1-\alpha-\beta
+\end{equation*}
+
+\begin{center}
+\includegraphics[scale=0.4]{im15}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.4]{im16}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+El método derivado para la cadena de dos estados en la sección anterior se puede generalizar a cadenas de m-estados.Sea $T$ una matriz estocástica $m x m$, en otras palabras, una posible matriz de transición. Los eigenvalores de T están dados por
+\begin{center}
+\includegraphics[scale=0.4]{im19}
+\end{center}
+donde $I_{m}$ es la matriz identidad de orden $m$. Suponga que los valores propios son distintos y se denotan por $\lambda_{1}, \lambda_{2},\ldots ,\lambda_{m}$.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+Nuevamente note que la matriz estocástica $T$ siempre tiene un eigenvalor unitario, digamos $\lambda_{1}=1$ con un eigenvector unitario
+
+\begin{center}
+\includegraphics[scale=0.4]{im20}
+\end{center}
+Todos los vectores tiene que satisfacer 
+\begin{center}
+\includegraphics[scale=0.4]{im21}
+\end{center}
+la matriz C quedaría como 
+\begin{center}
+\includegraphics[scale=0.4]{im22}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+La matriz C nos sirve para diagonalizar la matriz T, quedando como 
+
+
+\begin{center}
+\includegraphics[scale=0.3]{im23}
+\end{center}
+la cual es útil para estimar la potencia n
+\begin{center}
+\includegraphics[scale=0.3]{im24}
+\end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+\textbf{Ejercicio 1}
+
+Encuentre los eigenvalores y eigenvectores de la matriz estocástica 
+
+\begin{center}
+\includegraphics[scale=0.3]{im25}
+\end{center}
+
+Encuentre una fórmula para $T^{n}$, y encuentre el $lim_{n\rightarrow \infty}$ $T^{n}$.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+\textbf{Ejercicio 2}
+
+
+Los estados absorbentes son reconocibles en las cadenas de Markov por un valor 1 en un elemento diagonal de la matriz de transición. Dado que tales matrices son estocásticas, todos los demás elementos de la misma fila deben ser cero.
+
+\begin{center}
+\includegraphics[scale=0.3]{im26}
+\end{center}
+Dibuje el grafo y encuentre una fórmula para $T^{n}$, y $lim_{n\rightarrow \infty}$ $T^{n}$.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+\textbf{Ejercicio 3}
+
+
+Un modelo enfermedad-muerte. Un posible modelo simple enfermedad-muerte se puede representar mediante una cadena de Markov de cuatro estados en la que $E_{1}$ es un estado en el que un individuo está libre de una enfermedad particular, $E_{2}$ es un estado en el que el individuo tiene la enfermedad, y $E_3$ y $E_4$ son
+respectivamente estados de muerte que surgen como consecuencia de la enfermedad o por otras causas. Durante algún intervalo de tiempo apropiado (quizás un ciclo anual), asignamos probabilidades a la transición entre los estados. Supongamos que la matriz de transición es (en el orden de los estados)
+
+\begin{center}
+\includegraphics[scale=0.3]{im27}
+\end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+\textbf{Ejercicio 3}
+
+
+Dibuje la cadena. Encuentre las probabilidades de que una persona muera finalmente después de una gran cantidad de transiciones de la enfermedad, dado que inicialmente no la padeció.
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Cadena de Markov general bi-estado}
+\textbf{Ejercicio 4}
+
+
+En el problema de la ruina de un jugador, suponga que $p$ es la probabilidad de que el jugador gane en cada jugada, y que $a = 5$ y que la apuesta inicial del jugador es $k = 3$ unidades. ¿Cuál es la probabilidad de que el jugador realmente gane en la cuarta jugada?
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Clasificación de estados}
+\begin{block}{Estado absorbente}
+En el estado absorbente una vez ingresado, no hay escapatoria. Un estado absorbente $E_i$ se caracteriza por las probabilidades
+
+\begin{center}
+\includegraphics[scale=0.4]{im28}
+\end{center}
+en el $i$-th renglón de  $T$
+\end{block}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Clasificación de estados}
+\begin{block}{Estado periódico}
+La probabilidad de un retorno a $E_{i}$ en el paso $n$ es $p_{ii}^{(n)}$ . Sea $t$ un entero mayor a 1. Supongamos 
+
+\begin{center}
+\includegraphics[scale=0.4]{im29}
+\end{center}
+en este caso el estado $E_i$ es periódico con periodo $t$. Si, para un estado, no existe tal $t$ con esta propiedad, entonces el estado se describe como aperiódico.
+\end{block}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Clasificación de estados}
+\begin{block}{Regla general para estados periódico}
+sea
+
+\begin{center}
+\includegraphics[scale=0.4]{im30}
+\end{center}
+
+el máximo común divisor (greatest common divisor) del conjunto de enteros $n$ para los cuales $p^{(n)}_{ii}> 0$. Entonces se dice que el estado $E_{i}$ es periódico si $d(i)> 1$ y aperiódico si $d (i) = 1$.
+\end{block}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Clasificación de estados}
+Ejemplo de estados periódicos.
+
+Una cadena de Markov de cuatro estados tiene la matriz de transición 
+\begin{columns}
+\column{0.4\textwidth}
+\begin{center}
+\includegraphics[scale=0.3]{im31}
+\end{center}
+\column{0.6\textwidth}
+\begin{center}
+\includegraphics[scale=0.2]{im32}
+\end{center}
+\end{columns}
+
+se observa que todos los estados tienen un período 3. Por ejemplo, si la cadena comienza en $E_{1}$, los retornos a $E_1$ posibles en los pasos en los pasos $3, 6, 9,\ldots$ ya sea a través de $1E_2$ o $E_3$.
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Clasificación de estados}
+\begin{block}{Estado persistente - recurrente}
+Sea $f^{(n)}_{j}$ la probabilidad de que el primer regreso a $E_{j}$ ocurra en el n-ésimo paso. Esta probabilidad no es la misma que $p^{(n)}_{jj}$, que es la probabilidad de que se produzca un retorno en el n-ésimo paso, e incluye los posibles retorno en los pasos $1, 2, 3,\ldots, n - 1$ también. Esto es 
+
+\begin{center}
+\includegraphics[scale=0.4]{im33}
+\end{center}
+
+
+\end{block}
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Clasificación de estados}
+\begin{block}{Estado persistente -  recurrente}
+
+en general
+\begin{center}
+\includegraphics[scale=0.35]{im34}
+\end{center}
+De las ecuaciones anteriores se puede despejar $f_{j}^{(n)}$ 
+\begin{center}
+\includegraphics[scale=0.35]{im35}
+\end{center}
+\end{block}
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Clasificación de estados}
+
+\begin{block}{Estado persistente - recurrente}
+La probabilidad de que una cadena regrese en algún paso al estado $E_j$ es
+\begin{center}
+\includegraphics[scale=0.35]{im36}
+\end{center}
+
+Si $f_{j} = 1$, entonces un retorno a $E_{j}$ es seguro, y $E_{j}$ se llama \textbf{estado persistente}.
+\end{block}
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Clasificación de estados}
+Ejemplo. Estado persistente - recurrente
+Una cadena de Markov de tres estados tiene la matriz de transición
+\begin{center}
+\includegraphics[scale=0.35]{im37}
+\end{center}
+donde $0 <p <1, 0 <q <1$. Demuestre que el estado $E_1$ es persistente.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Clasificación de estados}
+Diagrama de transición
+
+\begin{center}
+\includegraphics[scale=0.35]{im38}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Clasificación de estados}
+Si una secuencia comienza en $E_1$, entonces se puede ver que primero se pueden volver de $E_1$ a $E_1$ en cada paso excepto para $n = 2$, ya que después de dos pasos la cadena debe estar en el estado $E_3$. Entonces
+\begin{center}
+\includegraphics[scale=0.35]{im39}
+\end{center}
+El último resultado para $f_ {1} ^ {(n)}$ para $n \geq 4$ se deriva de la siguiente secuencia de transiciones:
+
+\begin{center}
+\includegraphics[scale=0.35]{im40}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Clasificación de estados}
+La probabilidad $f_{1}$ de que el sistema regrese al menos una vez a $E_{1}$ es
+
+\begin{center}
+\includegraphics[scale=0.35]{im41}
+\end{center}
+
+Por tanto, $f_{1} = 1$, y en consecuencia el estado $E_1$ es persistente.
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Clasificación de estados}
+
+\begin{block}{número de recurrencias promedio}
+El número de recurrencias promedio $\mu_{j}$ de un estado persistente $E_{j}$, del cual $\sum_{n=1}^{\infty} f_{j}^{(n)}=1$ esta dado por 
+
+\begin{center}
+\includegraphics[scale=0.35]{im42}
+\end{center}
+
+\end{block}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Clasificación de estados}
+Del ejemplo anterior, el estado persistente $E_{1}$, el promedio de veces recurrentes esta dado por 
+
+
+\begin{center}
+\includegraphics[scale=0.3]{im43}
+\end{center}
+que es finito. Para algunas cadenas, el numero medio de recurrencia puede ser infinito. Se dice que un estado persistente $E_j$ es nulo si $\mu_j = \infty$, y no nulo si $\mu_j < \infty$. 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Clasificación de estados}
+
+\begin{block}{Estado transitorio}
+Para un estado persistente, la probabilidad de un primer retorno en algún paso en el futuro es cierta. Para algunos estados,
+\begin{center}
+\includegraphics[scale=0.4]{im44}
+\end{center}
+
+lo que significa que la probabilidad de un primer retorno no es segura. Estos estados se describen como \textbf{transitorios}.
+\end{block}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Clasificación de estados}
+Ejercicio. Una cadena de Markov de cuatro estados tiene la matriz de transición
+ 
+\begin{center}
+\includegraphics[scale=0.4]{im45}
+\end{center}
+
+demuestre que el estado $E_{1}$ es transitorio.
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Clasificación de estados}
+
+\begin{block}{Estado ergódico}
+El estado que es persistente, no nulo y aperiódico es llamado ergódico. Los estados ergódicos son importantes en la clasificación de cadenas y en la existencia de distribuciones de probabilidad limitantes.
+
+\end{block}
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

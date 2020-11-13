@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.19)  2 NOV 2020 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.19)  12 NOV 2020 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1081,6 +1081,383 @@ Missing character: There is no ´ in font cmss10!
 ] [22
 
 ]
+<im2.png, id=647, 538.01pt x 99.37125pt>
+File: im2.png Graphic file (type png)
+<use im2.png>
+Package pdftex.def Info: im2.png  used on input line 393.
+(pdftex.def)             Requested size: 215.20018pt x 39.74779pt.
+<im3.png, id=648, 876.27374pt x 89.33376pt>
+File: im3.png Graphic file (type png)
+<use im3.png>
+Package pdftex.def Info: im3.png  used on input line 393.
+(pdftex.def)             Requested size: 306.7004pt x 31.26727pt.
+ [23
+
+ <./im2.png> <./im3.png>]
+File: im3.png Graphic file (type png)
+<use im3.png>
+Package pdftex.def Info: im3.png  used on input line 407.
+(pdftex.def)             Requested size: 306.7004pt x 31.26727pt.
+<im4.png, id=679, 431.6125pt x 137.51375pt>
+File: im4.png Graphic file (type png)
+<use im4.png>
+Package pdftex.def Info: im4.png  used on input line 407.
+(pdftex.def)             Requested size: 172.64194pt x 55.00452pt.
+ [24
+
+ <./im4.png>]
+<im5.png, id=708, 734.745pt x 207.77625pt>
+File: im5.png Graphic file (type png)
+<use im5.png>
+Package pdftex.def Info: im5.png  used on input line 423.
+(pdftex.def)             Requested size: 293.89279pt x 83.10901pt.
+ [25
+
+ <./im5.png>]
+File: im5.png Graphic file (type png)
+<use im5.png>
+Package pdftex.def Info: im5.png  used on input line 439.
+(pdftex.def)             Requested size: 293.89279pt x 83.10901pt.
+<im6.png, id=738, 160.6pt x 101.37875pt>
+File: im6.png Graphic file (type png)
+<use im6.png>
+Package pdftex.def Info: im6.png  used on input line 439.
+(pdftex.def)             Requested size: 64.23885pt x 40.55077pt.
+ [26
+
+ <./im6.png>]
+<im7.png, id=767, 728.7225pt x 103.38625pt>
+File: im7.png Graphic file (type png)
+<use im7.png>
+Package pdftex.def Info: im7.png  used on input line 456.
+(pdftex.def)             Requested size: 291.48383pt x 41.35376pt.
+<im8.png, id=768, 180.675pt x 88.33pt>
+File: im8.png Graphic file (type png)
+<use im8.png>
+Package pdftex.def Info: im8.png  used on input line 456.
+(pdftex.def)             Requested size: 72.2687pt x 35.33136pt.
+ [27
+
+ <./im7.png> <./im8.png>]
+<im9.png, id=799, 385.44pt x 99.37125pt>
+File: im9.png Graphic file (type png)
+<use im9.png>
+Package pdftex.def Info: im9.png  used on input line 472.
+(pdftex.def)             Requested size: 154.17326pt x 39.74779pt.
+<im10.png, id=800, 313.17pt x 93.34875pt>
+File: im10.png Graphic file (type png)
+<use im10.png>
+Package pdftex.def Info: im10.png  used on input line 472.
+(pdftex.def)             Requested size: 125.26576pt x 37.33882pt.
+ [28
+
+ <./im9.png> <./im10.png>]
+<im11.png, id=830, 772.8875pt x 251.94125pt>
+File: im11.png Graphic file (type png)
+<use im11.png>
+Package pdftex.def Info: im11.png  used on input line 481.
+(pdftex.def)             Requested size: 309.14952pt x 100.7747pt.
+
+Overfull \hbox (1.85965pt too wide) in paragraph at lines 481--481
+ [] 
+ []
+
+[29
+
+ <./im11.png>]
+<im12.png, id=859, 659.46375pt x 113.42375pt>
+File: im12.png Graphic file (type png)
+<use im12.png>
+Package pdftex.def Info: im12.png  used on input line 497.
+(pdftex.def)             Requested size: 263.78082pt x 45.36868pt.
+<im13.png, id=860, 390.45876pt x 100.375pt>
+File: im13.png Graphic file (type png)
+<use im13.png>
+Package pdftex.def Info: im13.png  used on input line 497.
+(pdftex.def)             Requested size: 156.18073pt x 40.14928pt.
+<im14.png, id=861, 231.86626pt x 70.2625pt>
+File: im14.png Graphic file (type png)
+<use im14.png>
+Package pdftex.def Info: im14.png  used on input line 497.
+(pdftex.def)             Requested size: 92.74484pt x 28.10449pt.
+ [30
+
+ <./im12.png> <./im13.png> <./im14.png>]
+File: im14.png Graphic file (type png)
+<use im14.png>
+Package pdftex.def Info: im14.png  used on input line 510.
+(pdftex.def)             Requested size: 92.74484pt x 28.10449pt.
+<im15.png, id=892, 400.49625pt x 91.34125pt>
+File: im15.png Graphic file (type png)
+<use im15.png>
+Package pdftex.def Info: im15.png  used on input line 510.
+(pdftex.def)             Requested size: 160.19566pt x 36.53584pt.
+ [31
+
+ <./im15.png>]
+<im16.png, id=923, 728.7225pt x 98.3675pt>
+File: im16.png Graphic file (type png)
+<use im16.png>
+Package pdftex.def Info: im16.png  used on input line 525.
+(pdftex.def)             Requested size: 291.48383pt x 39.34628pt.
+<im17.png, id=924, 801.99625pt x 89.33376pt>
+File: im17.png Graphic file (type png)
+<use im17.png>
+Package pdftex.def Info: im17.png  used on input line 525.
+(pdftex.def)             Requested size: 320.79282pt x 35.73286pt.
+
+Overfull \hbox (13.50294pt too wide) in paragraph at lines 525--525
+ [] 
+ []
+
+[32
+
+ <./im16.png> <./im17.png>]
+<im18.png, id=954, 783.92876pt x 159.59625pt>
+File: im18.png Graphic file (type png)
+<use im18.png>
+Package pdftex.def Info: im18.png  used on input line 534.
+(pdftex.def)             Requested size: 313.56595pt x 63.83736pt.
+
+Overfull \hbox (6.27608pt too wide) in paragraph at lines 534--534
+ [] 
+ []
+
+[33
+
+ <./im18.png>]
+File: im15.png Graphic file (type png)
+<use im15.png>
+Package pdftex.def Info: im15.png  used on input line 550.
+(pdftex.def)             Requested size: 160.19566pt x 36.53584pt.
+File: im16.png Graphic file (type png)
+<use im16.png>
+Package pdftex.def Info: im16.png  used on input line 550.
+(pdftex.def)             Requested size: 291.48383pt x 39.34628pt.
+ [34
+
+]
+<im19.png, id=1010, 188.705pt x 53.19875pt>
+File: im19.png Graphic file (type png)
+<use im19.png>
+Package pdftex.def Info: im19.png  used on input line 560.
+(pdftex.def)             Requested size: 75.48065pt x 21.27911pt.
+ [35
+
+ <./im19.png>]
+<im20.png, id=1040, 283.0575pt x 49.18375pt>
+File: im20.png Graphic file (type png)
+<use im20.png>
+Package pdftex.def Info: im20.png  used on input line 577.
+(pdftex.def)             Requested size: 113.22098pt x 19.67314pt.
+<im21.png, id=1041, 444.66125pt x 40.15pt>
+File: im21.png Graphic file (type png)
+<use im21.png>
+Package pdftex.def Info: im21.png  used on input line 577.
+(pdftex.def)             Requested size: 177.86134pt x 16.05971pt.
+<im22.png, id=1042, 312.16624pt x 47.17625pt>
+File: im22.png Graphic file (type png)
+<use im22.png>
+Package pdftex.def Info: im22.png  used on input line 577.
+(pdftex.def)             Requested size: 124.86427pt x 18.87015pt.
+ [36
+
+ <./im20.png> <./im21.png> <./im22.png>]
+<im23.png, id=1073, 342.27875pt x 160.6pt>
+File: im23.png Graphic file (type png)
+<use im23.png>
+Package pdftex.def Info: im23.png  used on input line 592.
+(pdftex.def)             Requested size: 102.6844pt x 48.18036pt.
+<im24.png, id=1074, 362.35374pt x 239.89626pt>
+File: im24.png Graphic file (type png)
+<use im24.png>
+Package pdftex.def Info: im24.png  used on input line 592.
+(pdftex.def)             Requested size: 108.70695pt x 71.96942pt.
+ [37
+
+ <./im23.png> <./im24.png>]
+<im25.png, id=1105, 286.06876pt x 132.495pt>
+File: im25.png Graphic file (type png)
+<use im25.png>
+Package pdftex.def Info: im25.png  used on input line 605.
+(pdftex.def)             Requested size: 85.82129pt x 39.7488pt.
+ [38
+
+ <./im25.png>]
+<im26.png, id=1134, 285.065pt x 147.55125pt>
+File: im26.png Graphic file (type png)
+<use im26.png>
+Package pdftex.def Info: im26.png  used on input line 620.
+(pdftex.def)             Requested size: 85.52016pt x 44.2657pt.
+ [39
+
+ <./im26.png>]
+<im27.png, id=1164, 330.23375pt x 157.58875pt>
+File: im27.png Graphic file (type png)
+<use im27.png>
+Package pdftex.def Info: im27.png  used on input line 635.
+(pdftex.def)             Requested size: 99.07088pt x 47.27698pt.
+
+Overfull \vbox (10.23834pt too high) detected at line 635
+ []
+
+[40
+
+ <./im27.png>] [41
+
+] [42
+
+]
+<im28.png, id=1247, 651.43375pt x 64.24pt>
+File: im28.png Graphic file (type png)
+<use im28.png>
+Package pdftex.def Info: im28.png  used on input line 669.
+(pdftex.def)             Requested size: 260.56888pt x 25.69554pt.
+ [43
+
+ <./im28.png>]
+<im29.png, id=1278, 439.6425pt x 123.46124pt>
+File: im29.png Graphic file (type png)
+<use im29.png>
+Package pdftex.def Info: im29.png  used on input line 683.
+(pdftex.def)             Requested size: 175.85388pt x 49.3836pt.
+ [44
+
+ <./im29.png>]
+<im30.png, id=1307, 356.33125pt x 68.255pt>
+File: im30.png Graphic file (type png)
+<use im30.png>
+Package pdftex.def Info: im30.png  used on input line 698.
+(pdftex.def)             Requested size: 142.52997pt x 27.3015pt.
+ [45
+
+ <./im30.png>]
+<im31.png, id=1336, 333.245pt x 175.65625pt>
+File: im31.png Graphic file (type png)
+<use im31.png>
+Package pdftex.def Info: im31.png  used on input line 719.
+(pdftex.def)             Requested size: 99.97426pt x 52.69727pt.
+<im32.png, id=1337, 515.9275pt x 499.8675pt>
+File: im32.png Graphic file (type png)
+<use im32.png>
+Package pdftex.def Info: im32.png  used on input line 719.
+(pdftex.def)             Requested size: 103.18367pt x 99.97173pt.
+ [46
+
+ <./im31.png> <./im32.png>]
+<im33.png, id=1367, 459.7175pt x 200.75pt>
+File: im33.png Graphic file (type png)
+<use im33.png>
+Package pdftex.def Info: im33.png  used on input line 735.
+(pdftex.def)             Requested size: 183.88373pt x 80.29857pt.
+
+Overfull \vbox (0.68262pt too high) detected at line 735
+ []
+
+[47
+
+ <./im33.png>]
+<im34.png, id=1397, 607.26875pt x 124.465pt>
+File: im34.png Graphic file (type png)
+<use im34.png>
+Package pdftex.def Info: im34.png  used on input line 753.
+(pdftex.def)             Requested size: 212.54724pt x 43.5634pt.
+<im35.png, id=1398, 609.27625pt x 190.7125pt>
+File: im35.png Graphic file (type png)
+<use im35.png>
+Package pdftex.def Info: im35.png  used on input line 753.
+(pdftex.def)             Requested size: 213.24988pt x 66.75037pt.
+
+Overfull \vbox (11.85478pt too high) detected at line 753
+ []
+
+[48
+
+ <./im34.png> <./im35.png>]
+<im36.png, id=1428, 246.9225pt x 122.4575pt>
+File: im36.png Graphic file (type png)
+<use im36.png>
+Package pdftex.def Info: im36.png  used on input line 769.
+(pdftex.def)             Requested size: 86.42415pt x 42.86075pt.
+ [49
+
+ <./im36.png>]
+<im37.png, id=1458, 370.38374pt x 129.48375pt>
+File: im37.png Graphic file (type png)
+<use im37.png>
+Package pdftex.def Info: im37.png  used on input line 779.
+(pdftex.def)             Requested size: 129.63625pt x 45.31998pt.
+ [50
+
+ <./im37.png>]
+<im38.png, id=1488, 538.01pt x 489.83pt>
+File: im38.png Graphic file (type png)
+<use im38.png>
+Package pdftex.def Info: im38.png  used on input line 788.
+(pdftex.def)             Requested size: 188.30632pt x 171.44305pt.
+ [51
+
+ <./im38.png>]
+<im39.png, id=1517, 731.73375pt x 121.45375pt>
+File: im39.png Graphic file (type png)
+<use im39.png>
+Package pdftex.def Info: im39.png  used on input line 802.
+(pdftex.def)             Requested size: 256.11064pt x 42.50943pt.
+<im40.png, id=1518, 332.24126pt x 103.38625pt>
+File: im40.png Graphic file (type png)
+<use im40.png>
+Package pdftex.def Info: im40.png  used on input line 802.
+(pdftex.def)             Requested size: 116.28618pt x 36.18571pt.
+ [52
+
+ <./im39.png> <./im40.png>]
+<im41.png, id=1548, 833.1125pt x 309.155pt>
+File: im41.png Graphic file (type png)
+<use im41.png>
+Package pdftex.def Info: im41.png  used on input line 815.
+(pdftex.def)             Requested size: 291.59375pt x 108.20586pt.
+ [53
+
+ <./im41.png>]
+<im42.png, id=1577, 242.9075pt x 121.45375pt>
+File: im42.png Graphic file (type png)
+<use im42.png>
+Package pdftex.def Info: im42.png  used on input line 829.
+(pdftex.def)             Requested size: 85.01889pt x 42.50943pt.
+ [54
+
+ <./im42.png>]
+<im43.png, id=1607, 1045.9075pt x 219.82124pt>
+File: im43.png Graphic file (type png)
+<use im43.png>
+Package pdftex.def Info: im43.png  used on input line 840.
+(pdftex.def)             Requested size: 313.77467pt x 65.94687pt.
+
+Overfull \hbox (6.4848pt too wide) in paragraph at lines 840--840
+ [] 
+ []
+
+[55
+
+ <./im43.png>]
+<im44.png, id=1637, 280.04625pt x 109.40875pt>
+File: im44.png Graphic file (type png)
+<use im44.png>
+Package pdftex.def Info: im44.png  used on input line 855.
+(pdftex.def)             Requested size: 112.0165pt x 43.76271pt.
+ [56
+
+ <./im44.png>]
+<im45.png, id=1665, 372.39125pt x 173.64874pt>
+File: im45.png Graphic file (type png)
+<use im45.png>
+Package pdftex.def Info: im45.png  used on input line 869.
+(pdftex.def)             Requested size: 148.95386pt x 69.45825pt.
+ [57
+
+ <./im45.png>] [58
+
+]
 \tf@nav=\write6
 \openout6 = `markov_chain.nav'.
 
@@ -1090,22 +1467,22 @@ Missing character: There is no ´ in font cmss10!
 \tf@snm=\write8
 \openout8 = `markov_chain.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 385.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 385.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 884.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 884.
  (./markov_chain.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 385.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 385.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 884.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 884.
 Package rerunfilecheck Info: File `markov_chain.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21370 strings out of 481239
- 401403 string characters out of 5920377
+ 21833 strings out of 481239
+ 406241 string characters out of 5920377
  670743 words of memory out of 5000000
- 36037 multiletter control sequences out of 15000+600000
+ 36428 multiletter control sequences out of 15000+600000
  560447 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,16n,67p,806b,577s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1130,10 +1507,10 @@ are/texmf/fonts/type1/public/cm-super/sfss2074.pfb></usr/share/texmf/fonts/type
 1/public/cm-super/sfsx0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
 sx0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1000.pfb></usr/sha
 re/texmf/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on markov_chain.pdf (22 pages, 299890 bytes).
+Output written on markov_chain.pdf (58 pages, 654305 bytes).
 PDF statistics:
- 733 PDF objects out of 1000 (max. 8388607)
- 669 compressed objects within 7 object streams
- 45 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1825 PDF objects out of 2073 (max. 8388607)
+ 1627 compressed objects within 17 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 268 words of extra memory for PDF output out of 10000 (max. 10000000)
 
