@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.19)  3 DEC 2020 20:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.19)  4 DEC 2020 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1152,6 +1152,149 @@ Overfull \hbox (21.9343pt too wide) in paragraph at lines 196--196
  <./im14.png> <./im15.png>] [13
 
 ]
+<im16.png, id=410, 162.6075pt x 61.22874pt>
+File: im16.png Graphic file (type png)
+<use im16.png>
+Package pdftex.def Info: im16.png  used on input line 219.
+(pdftex.def)             Requested size: 65.04184pt x 24.49104pt.
+<im17.png, id=411, 253.94875pt x 98.3675pt>
+File: im17.png Graphic file (type png)
+<use im17.png>
+Package pdftex.def Info: im17.png  used on input line 219.
+(pdftex.def)             Requested size: 101.5777pt x 39.34628pt.
+ [14
+
+ <./im16.png> <./im17.png>]
+<im18.png, id=441, 1077.02374pt x 118.4425pt>
+File: im18.png Graphic file (type png)
+<use im18.png>
+Package pdftex.def Info: im18.png  used on input line 229.
+(pdftex.def)             Requested size: 323.10962pt x 35.53302pt.
+
+Overfull \hbox (15.81975pt too wide) in paragraph at lines 229--229
+ [] 
+ []
+
+[15
+
+ <./im18.png>]
+File: im18.png Graphic file (type png)
+<use im18.png>
+Package pdftex.def Info: im18.png  used on input line 242.
+(pdftex.def)             Requested size: 323.10962pt x 35.53302pt.
+
+Overfull \hbox (15.81975pt too wide) in paragraph at lines 242--242
+ [] 
+ []
+
+<im19.png, id=470, 716.6775pt x 172.645pt>
+File: im19.png Graphic file (type png)
+<use im19.png>
+Package pdftex.def Info: im19.png  used on input line 242.
+(pdftex.def)             Requested size: 286.66592pt x 69.05676pt.
+[16
+
+ <./im19.png>]
+File: im19.png Graphic file (type png)
+<use im19.png>
+Package pdftex.def Info: im19.png  used on input line 253.
+(pdftex.def)             Requested size: 286.66592pt x 69.05676pt.
+ [17
+
+]
+<im20.png, id=527, 288.07625pt x 108.405pt>
+File: im20.png Graphic file (type png)
+<use im20.png>
+Package pdftex.def Info: im20.png  used on input line 266.
+(pdftex.def)             Requested size: 115.22844pt x 43.36122pt.
+ [18
+
+ <./im20.png>]
+<im21.png, id=556, 237.88875pt x 77.28876pt>
+File: im21.png Graphic file (type png)
+<use im21.png>
+Package pdftex.def Info: im21.png  used on input line 277.
+(pdftex.def)             Requested size: 95.15381pt x 30.91495pt.
+ [19
+
+ <./im21.png>]
+<im22.png, id=586, 217.81375pt x 80.3pt>
+File: im22.png Graphic file (type png)
+<use im22.png>
+Package pdftex.def Info: im22.png  used on input line 298.
+(pdftex.def)             Requested size: 87.12395pt x 32.11942pt.
+<im23.png, id=587, 628.3475pt x 107.40125pt>
+File: im23.png Graphic file (type png)
+<use im23.png>
+Package pdftex.def Info: im23.png  used on input line 298.
+(pdftex.def)             Requested size: 251.33455pt x 42.95973pt.
+<im24.png, id=588, 502.87875pt x 198.7425pt>
+File: im24.png Graphic file (type png)
+<use im24.png>
+Package pdftex.def Info: im24.png  used on input line 298.
+(pdftex.def)             Requested size: 201.14793pt x 79.49557pt.
+
+Overfull \vbox (41.37027pt too high) detected at line 298
+ []
+
+[20
+
+ <./im22.png> <./im23.png> <./im24.png>]
+<im25.png, id=620, 207.77625pt x 78.2925pt>
+File: im25.png Graphic file (type png)
+<use im25.png>
+Package pdftex.def Info: im25.png  used on input line 320.
+(pdftex.def)             Requested size: 83.10901pt x 31.31644pt.
+<im26.png, id=621, 446.66875pt x 95.35625pt>
+File: im26.png Graphic file (type png)
+<use im26.png>
+Package pdftex.def Info: im26.png  used on input line 320.
+(pdftex.def)             Requested size: 178.66432pt x 38.14182pt.
+<im28.png, id=622, 430.60875pt x 123.46124pt>
+File: im28.png Graphic file (type png)
+<use im28.png>
+Package pdftex.def Info: im28.png  used on input line 320.
+(pdftex.def)             Requested size: 150.7153pt x 43.21207pt.
+
+Overfull \vbox (16.2895pt too high) detected at line 320
+ []
+
+[21
+
+ <./im25.png> <./im26.png> <./im28.png>]
+File: im28.png Graphic file (type png)
+<use im28.png>
+Package pdftex.def Info: im28.png  used on input line 340.
+(pdftex.def)             Requested size: 150.7153pt x 43.21207pt.
+<im29.png, id=653, 523.9575pt x 71.26625pt>
+File: im29.png Graphic file (type png)
+<use im29.png>
+Package pdftex.def Info: im29.png  used on input line 340.
+(pdftex.def)             Requested size: 183.38786pt x 24.94354pt.
+ [22
+
+ <./im29.png>]
+<im30.png, id=681, 516.93124pt x 106.3975pt>
+File: im30.png Graphic file (type png)
+<use im30.png>
+Package pdftex.def Info: im30.png  used on input line 360.
+(pdftex.def)             Requested size: 180.92863pt x 37.23967pt.
+<im31.png, id=682, 285.065pt x 96.36pt>
+File: im31.png Graphic file (type png)
+<use im31.png>
+Package pdftex.def Info: im31.png  used on input line 360.
+(pdftex.def)             Requested size: 99.77423pt x 33.72649pt.
+ [23
+
+ <./im30.png> <./im31.png>]
+<im32.png, id=712, 312.16624pt x 104.39pt>
+File: im32.png Graphic file (type png)
+<use im32.png>
+Package pdftex.def Info: im32.png  used on input line 373.
+(pdftex.def)             Requested size: 109.25981pt x 36.53703pt.
+ [24
+
+ <./im32.png>]
 \tf@nav=\write6
 \openout6 = `"Poisson Processes.nav"'.
 
@@ -1161,22 +1304,22 @@ Overfull \hbox (21.9343pt too wide) in paragraph at lines 196--196
 \tf@snm=\write8
 \openout8 = `"Poisson Processes.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 377.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 377.
  (./Poisson Processes.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 208.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 208.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 377.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 377.
 Package rerunfilecheck Info: File `"Poisson Processes".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21280 strings out of 481239
- 399051 string characters out of 5920377
+ 21438 strings out of 481239
+ 400671 string characters out of 5920377
  668827 words of memory out of 5000000
- 35990 multiletter control sequences out of 15000+600000
+ 36126 multiletter control sequences out of 15000+600000
  544178 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,15n,67p,813b,577s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1189,10 +1332,10 @@ s/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type
 fss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/sh
 are/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type
 1/public/cm-super/sfsx0600.pfb>
-Output written on "Poisson Processes.pdf" (13 pages, 268397 bytes).
+Output written on "Poisson Processes.pdf" (24 pages, 390070 bytes).
 PDF statistics:
- 446 PDF objects out of 1000 (max. 8388607)
- 384 compressed objects within 4 object streams
- 27 named destinations out of 1000 (max. 500000)
- 108 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 785 PDF objects out of 1000 (max. 8388607)
+ 677 compressed objects within 7 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -147,7 +147,7 @@ Note that the Poisson distribution has the property that its mean is the same as
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Probabilidades de transición}
+\frametitle{The Poisson process}
 From
 \begin{center}
 \includegraphics[scale=0.28]{im1}
@@ -165,7 +165,7 @@ given
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Probabilidades de transición}
+\frametitle{The Poisson process}
 These are differential-difference equations for the sequence of probabilities $p_{n}(t)$. From the definition of differentiation, the derivatives are obtained by the limiting process
 
 \begin{center}
@@ -180,7 +180,7 @@ so that approximately, for small $\delta t > 0$,
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Probabilidad estacionaria o absoluta}
+\frametitle{The Poisson process}
 we can replace the equations by
 
 \begin{center}
@@ -197,10 +197,179 @@ so that
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Probabilidad estacionaria o absoluta}
+\frametitle{The Poisson process}
 
 We can interpret the equations as follows. For the Geiger counter, we can infer from these formulas that the probability that a particle is recorded in the short time interval $\delta t$ is $ \lambda \delta t$, and that the probability that two or more particles are recorded is negligible, and consequently that no recording takes place with probability $(1 - \lambda \delta t)$. The only way in which the outcome reading $n(\geq 1)$ can occur at time $t + \delta t$ is that either one particle was recorded in the interval $\delta t$ when $n$ particles were
 recorded at time $t$, or that nothing occurred with probability $(1 - \lambda \delta)$ when $n-1$ particles were recorded at time $t$.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Partition theorem approach}
+For the Geiger counter application (a similar argument can be adapted for the call-logging problem, etc.) we assume that the probability that one particle is recorded in the short time interval $\delta t$ is
+
+\begin{center}
+\includegraphics[scale=0.4]{im16}
+\end{center}
+The term $o(\delta t)$ described in words as ‘little o $\delta t$’ means that the remainder or error is of lower order than $\delta t$, that is
+\begin{center}
+\includegraphics[scale=0.4]{im17}
+\end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Partition theorem approach}
+The probability of two or more hits is assumed to be  $o(\delta t)$, that is, negligible as $\delta t \rightarrow 0$, and the probability of no hits is $1 -\lambda \delta t + o(\delta t)$. We now apply the partition theorem on the possible outcomes. The case $n = 0$ is special since reading zero can only occur through no event occurring. Thus
+
+\begin{center}
+\includegraphics[scale=0.3]{im18}
+\end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Partition theorem approach}
+
+\begin{center}
+\includegraphics[scale=0.3]{im18}
+\end{center}
+Dividing through by $\delta t$ and re-organizing the equations, we find that
+
+\begin{center}
+\includegraphics[scale=0.4]{im19}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Partition theorem approach}
+
+
+\begin{center}
+\includegraphics[scale=0.4]{im19}
+\end{center}
+All terms $o(1)$ tend to zero as $\delta t \rightarrow 0$. Not surprisingly, we have recovered firts Eqns 
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Iterative method}
+Suppose that our model of the Geiger counter is based on Eqn
+
+
+\begin{center}
+\includegraphics[scale=0.4]{im20}
+\end{center}
+
+and that we wish to solve the equations to recover $p_n(t)$, which we assume to be unknown for the purposes of this exercise. Equation is an ordinary differential equation for
+one unknown function $p 0 (t)$. 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Iterative method}
+It is of first-order, and it can be easily verified that its
+general solution is
+
+\begin{center}
+\includegraphics[scale=0.4]{im21}
+\end{center}
+where $C_0$ is a constant. We need to specify initial conditions for the problem. Assume that the instrumentation of the Geiger counter is set to zero initially. Thus we have the certain event for which $p_{0} (0) = 1$, and consequently $p_n (0) = 0$, $(n \geq 1)$
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Iterative method}
+the probability of any reading other than zero is zero at time $t = 0$. Hence $C_{0} = 1$ and
+
+\begin{center}
+\includegraphics[scale=0.4]{im22}
+\end{center}
+
+Now put $n = 1$ in 
+\begin{center}
+\includegraphics[scale=0.4]{im23}
+\end{center}
+
+so that
+
+\begin{center}
+\includegraphics[scale=0.4]{im24}
+\end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Iterative method}
+after substituting for $p_{0} (t)$. This first order differential equation for $p_{1} (t)$ is of integrating factor type with integrating factor
+
+\begin{center}
+\includegraphics[scale=0.4]{im25}
+\end{center}
+
+in which case it can be rewritten as the following separable differential equation:
+
+\begin{center}
+\includegraphics[scale=0.4]{im26}
+\end{center}
+
+Hence, integration with respect to $t$ results in
+
+\begin{center}
+\includegraphics[scale=0.35]{im28}
+\end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Iterative method}
+
+Hence, integration with respect to $t$ results in
+
+\begin{center}
+\includegraphics[scale=0.35]{im28}
+\end{center}
+
+Thus
+
+\begin{center}
+\includegraphics[scale=0.35]{im29}
+\end{center}
+
+since $p_{1} (0) = 0.$
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Iterative method}
+
+We now repeat the process by putting $n = 2$ in Eqn and
+substituting in the $p_{1} (t)$ which has just been found. The result is the equation
+
+\begin{center}
+\includegraphics[scale=0.35]{im30}
+\end{center}
+
+This is a further first-order integrating-factor differential equation which can be solved
+using the same method. The result is, using the initial condition $p_{2} (0) = 0$,
+
+\begin{center}
+\includegraphics[scale=0.35]{im31}
+\end{center}
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Iterative method}
+
+The method can be repeated for $n = 3, 4,\ldots$, and the results imply that
+ 
+\begin{center}
+\includegraphics[scale=0.35]{im32}
+\end{center}
+
+which is the probability given by Eqn PDF as we would expect. The result in Eqn can be justified rigorously by constructing a proof by induction.
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
